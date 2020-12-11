@@ -116,13 +116,9 @@
           delimiter: ','
         }, function (err, data) {
           
-        map.on('load', 'csvData', function (e) 
-         {
+        map.on('load', 'csvData', function (e) {
            var coordinates = e.features[0].geometry.coordinates.slice();
            var size = e.features[0].properties.Size;
-         }
-          map.on('load', function () {
-
             //Add the the layer to the map 
             map.addLayer({
               'id': 'csvData',
