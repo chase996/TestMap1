@@ -108,6 +108,7 @@
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
+         var sizePoint = e.features[0].properties.Size();
 
 
       function makeGeoJSON(csvData) {
@@ -126,10 +127,8 @@
                 'type': 'geojson',
                 'data': data
               },
-              'paint': {
-                var size = e.features[0].properties.Size();
-                
-                'circle-radius': size,
+              'paint': {                
+                'circle-radius': sizePoint,
                 'circle-color': "red"
               }
             });
