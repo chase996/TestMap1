@@ -109,7 +109,7 @@
         success: function (csvData) { makeGeoJSON(csvData); }
       });
 
-
+    var size = e.features[0].properties.Size;
 
       function makeGeoJSON(csvData) {
         csv2geojson.csv2geojson(csvData, {
