@@ -108,7 +108,6 @@
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
-         var sizePoint = e.features[0].properties.Size();
 
 
       function makeGeoJSON(csvData) {
@@ -121,6 +120,7 @@
 
             //Add the the layer to the map 
             map.addLayer({
+              var sizePoint = e.features[0].properties.Size();
               'id': 'csvData',
               'type': 'circle',
               'source': {
