@@ -108,8 +108,7 @@
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
-
-
+      
       function makeGeoJSON(csvData) {
         csv2geojson.csv2geojson(csvData, {
           latfield: 'Latitude',
@@ -126,6 +125,7 @@
                 'type': 'geojson',
                 'data': data
               },
+              var coordinates = e.features[0].geometry.coordinates.slice();
               'paint': {      
                 'circle-radius': e.features[0].properties.Size,
                 'circle-color': "red"
