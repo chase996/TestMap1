@@ -117,7 +117,6 @@
           delimiter: ','
         }, function (err, data) {
           map.on('load', function () {
-              var sizePoint = e.features[0].properties.Size;
 
             //Add the the layer to the map 
             map.addLayer({
@@ -128,7 +127,7 @@
                 'data': data
               },
               'paint': {                
-                'circle-radius': sizePoint,
+                'circle-radius': 10,
                 'circle-color': "red"
               }
             });
