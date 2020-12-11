@@ -122,14 +122,14 @@
             //Add the the layer to the map 
             map.addLayer({
               'id': 'csvData',
-              'type': 'square',
+              'type': 'circle',
               'source': {
                 'type': 'geojson',
                 'data': data
               },
               'paint': {
-                'square-radius': 20,
-                'square-color': "purple"
+                'circle-radius': 20,
+                'circle-color': "red"
               }
             });
 
