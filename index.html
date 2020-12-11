@@ -115,8 +115,7 @@
         csv2geojson.csv2geojson(csvData, {
           latfield: 'Latitude',
           lonfield: 'Longitude',
-          delimiter: ',',
-          size: 'Size'
+          delimiter: ','
         }, function (err, data) {
           map.on('load', function () {
 
@@ -129,7 +128,7 @@
                 'data': data
               },
               'paint': {
-                'circle-radius': size,
+                'circle-radius': 10,
                 'circle-color': "red"
               }
             });
