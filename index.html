@@ -127,7 +127,9 @@
                 'data': data
               },
               'paint': {
-                'circle-radius': e.features[0].properties.Size,
+                var size = e.features[0].properties.Size();
+                
+                'circle-radius': size,
                 'circle-color': "red"
               }
             });
