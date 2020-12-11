@@ -120,7 +120,6 @@
 
             //Add the the layer to the map 
             map.addLayer({
-            var Size = e.features[0].properties.Size;
               'id': 'csvData',
               'type': 'circle',
               'source': {
@@ -128,7 +127,7 @@
                 'data': data
               },
               'paint': {
-                'circle-radius': Size,
+                'circle-radius': e.features[0].properties.Size;
                 'circle-color': "red"
               }
             });
